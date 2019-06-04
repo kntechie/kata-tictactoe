@@ -5,5 +5,15 @@ describe("Tic Tac Toe Game", function() {
 
         expect(game.currentPlayer()).toEqual("X");
     });
+    
+    it("switches player after each turn", function() {
+        var game = new Game();
+
+        game.play();
+        game.play();
+        game.play();
+
+        expect(game.currentPlayer()).toEqual("O");
+    });
 
 });
